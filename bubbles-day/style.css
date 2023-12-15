@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    background: #0c192c;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 10px; /* Adjust the margin between the balls */
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(2n)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+.bubbles span:nth-child(3n)
+{
+    background: #6c5b7b;
+    box-shadow: 0 0 0 10px #6c5b7b44,
+    0 0 50px #6c5b7b,
+    0 0 100px #6c5b7b;
+}
+
+.bubbles span:nth-child(4n)
+{
+    background: #ffb677;
+    box-shadow: 0 0 0 10px #ffb67744,
+    0 0 50px #ffb677,
+    0 0 100px #ffb677;
+}
+
+.bubbles span:nth-child(5n)
+{
+    background: #76ead7;
+    box-shadow: 0 0 0 10px #76ead744,
+    0 0 50px #76ead7,
+    0 0 100px #76ead7;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-100vh) scale(1); /* Change translateY to a negative value */
+    }
+}
